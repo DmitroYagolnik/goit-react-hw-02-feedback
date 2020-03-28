@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Feedback from '../Feedback/Feedback';
 import Statistics from '../Statistics/Statistics';
+import style from './App.module.css';
 
 class App extends Component {
   state = {
@@ -27,7 +28,7 @@ class App extends Component {
   render() {
     const { good, neutral, bad } = this.state;
     return (
-      <>
+      <div className={style.PageContent}>
         <Feedback handleButton={this.handleButton} />
         <Statistics
           good={good}
@@ -36,7 +37,7 @@ class App extends Component {
           countTotalFeedback={this.countTotalFeedback}
           countPositiveFeedbackPercentage={this.countPositiveFeedbackPercentage}
         />
-      </>
+      </div>
     );
   }
 }
