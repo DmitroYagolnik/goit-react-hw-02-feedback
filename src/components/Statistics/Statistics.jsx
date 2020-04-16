@@ -11,7 +11,6 @@ const Statistics = ({
 }) => {
   return (
     <>
-      <h2>Statistics</h2>
       {countTotalFeedback() > 0 ? (
         <>
           <p>Good: {good}</p>
